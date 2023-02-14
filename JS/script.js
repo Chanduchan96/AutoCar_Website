@@ -7,7 +7,7 @@ menu.addEventListener('click',function(){
 });
 
 window.onscroll=()=>{
-if(window.scroll>0){
+if(window.scrollY>0){
     document.querySelector('.header').classList.add('active');
 }else{
     document.querySelector('.header').classList.remove('active');
@@ -16,3 +16,14 @@ if(window.scroll>0){
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 }
+
+window.onload=()=>{
+    if(window.scrollY>0){
+        document.querySelector('.header').classList.add('active');
+    }else{
+        document.querySelector('.header').classList.remove('active');
+    }
+    
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+    }

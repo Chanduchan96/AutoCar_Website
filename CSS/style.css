@@ -7,7 +7,7 @@
     --black:#130f40;
     --light-color:#666;
     --border:.1rem solid rgba(0,0,0,0.1);
-    --box-shadow:0.1rem 0.5rem rgba(0,0,0,0.1);
+    --box-shadow: 0.9rem 0.4rem rgba(0,0,0,0.08);
 
 }
 *{
@@ -25,7 +25,7 @@ html{
     overflow-x:hidden;
     scroll-padding-top:7rem;
     scroll-behavior: smooth;
-    height:300rem;
+   
 }
 .btn{
     display:inline-block;
@@ -95,10 +95,13 @@ html{
     cursor: pointer;
     display:none;
 }
+body{
+    height:300rem;
+}
 
 .header.active{
     box-shadow:var(--box-shadow);
-    padding:2rem;
+    padding:2rem 9%;
 }
 
 
@@ -119,7 +122,10 @@ html{
     .header{
         padding:2rem;
     }
-    
+    .header.active{
+        
+        padding:2rem;
+    }
 }
 
 @media(max-width:768px){
