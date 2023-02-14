@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,600&display=swap');
 :root{
     --yellow: #f9d806;
-    --light-yellow:#ffee80;
+    --light-yellow:#ccbd5b;
     --black:#130f40;
     --light-color:#666;
     --border:.1rem solid rgba(0,0,0,0.1);
@@ -25,19 +25,44 @@ html{
     overflow-x:hidden;
     scroll-padding-top:7rem;
     scroll-behavior: smooth;
+    height:300rem;
+}
+.btn{
+    display:inline-block;
+    margin-top:1rem;
+    border-radius:0.5rem;
+    background: var(--yellow);
+    color:var(--black);
+    font-weight:500;
+    font-size:1.7rem;
+    cursor:pointer;
+    padding:0.8rem 3rem;
+}
+.btn:hover{
+    background-color: var(--light-yellow);
 }
 
 .header{
     position:fixed;
     top:0;left:0;right:0;
-    z-index:999;
-    background:#fff;
-    display:flex;
+    background-color: #fff;
     align-items:center;
+    display:flex;
     justify-content:space-between;
-    padding:3rem 9%;
+    z-index: 999;
+    padding: 3rem 9%;
 }
 
+.header .navbar a{
+    font-size:1.7rem;
+    margin:0;
+    color:var(--black);
+    padding:1rem;
+
+}
+.header .navbar a:hover{
+    color:var(--light-yellow);
+}
 .header .logo{
     font-size:2.5rem;
     color:var(--black);
@@ -47,164 +72,70 @@ html{
 .header .logo span{
     color:var(--yellow);
 }
-.header .navbar a{
-    font-size:1.7rem;
-    margin:0 1rem;
-    color:var(--black);
-}
-.header .navbar a:hover{
-    color:var(--yellow);
-}
-
-.btn{
-    display:inline-block;
-    margin-top:0rem;
-    border-radius:1rem;
-    background: var(--light-yellow);
-    color:var(--black);
-    font-weight:500;
-    font-size:1.7rem;
-    cursor:pointer;
-    padding:0.5rem 0.5rem;
-}
-.btn:hover{
-    background:var(--yellow);
-}
 .header .btn{
     margin-top:0;
 }
-
 .header #login-btn i{
+    font-size:2.5rem;
+    color:var(--light-color);
+    cursor: pointer;
+    display:none;
+
+}
+.header #login-btn i:hover{
+    color: var(--yellow);
+}
+.header #menu-btn:hover{
+    color: var(--yellow);
+}
+
+#menu-btn{
     font-size:2.5rem;
     color:var(--light-color);
     cursor: pointer;
     display:none;
 }
 
-#menu-btn{
-    font-size:2.5rem;
-    color:var(--light-color);
-    cursor:pointer;
-    display:none;
-    border-radius: 10px;
-}
-body{
-    height:300rem;
-    margin:0;
-    padding:0;
-}
 .header.active{
-    box-shadow: var(--box-shadow);
-    padding:2rem 9%;
-}
-
-.login-form-container{
-    position:fixed;
-    top:105;left:0;
-    z-index: 10000;
-    height:100%;
-    width:100%;
-    background:rgba(255,255,255,.9);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    opacity:0;
-}
-.login-form-container .active{
-    top:0;
-    opacity:1;
-}
-.login-form-container form{
-    padding:2rem;
-    margin:2rem;
-    border-radius:.5rem;
     box-shadow:var(--box-shadow);
-    background:#fff;
-    border:var(--border);
-    text-align: center;
-   
-}
-.login-form-container form .buttons{
-    display:flex;
-    align-items:center;
-    gap:1rem;
-}
-.login-form-container form .btn{
-    display:block;
-    width:100%;
-    margin:.5rem 0;
-}
-.login-form-container form h3{
-    color:var(--black);
-    font-size:2.5rem;
-    padding-bottom:1rem;
-    text-transform:uppercase;
-
-}
-.login-form-container form .box{
-    margin:.7rem 0;
-    width:100%;
-    text-transform:none;
-    color:var(--black);
-    font-size:1.6rem;
-    padding:1rem 1.2rem;
-    border:var(--border);
-    border-radius:.5rem;
-
-}
-.login-form-container form p {
-    padding:1rem 0;
-    font-size:1.5rem;
-    color:var(--light-color);
-
-
-}
-.login-form-container form p a{
-    
-    color:var(--yellow);
-    text-decoration:underline;
-
-}
-.login-form-container #close-login-form{
-    position:absolute;
-    top:1.5rem;right:2.5rem;
-    font-size:5rem;
-    color:var(--black);
-    cursor:pointer;
+    padding:2rem;
 }
 
 
 
-/*media queries*/
+
+
+
+
+
+
+/*media quiries*/
+
 @media(max-width:991px){
     html{
-        font-size:55%
+        font-size: 55%;
+       
     }
     .header{
         padding:2rem;
     }
-    .header.active{
-        padding:2rem;
-    }
+    
 }
 
 @media(max-width:768px){
+
     #menu-btn{
         display:block;
     }
-    #menu-btn .fa-times{
-        transform:rotate(180deg);
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
     }
     .header #login-btn i{
         display:block;
     }
+    
     .header #login-btn .btn{
         display:none;
-    }
-    .header .navbar.active{
-        display:block;
-        /*clip-path:polygon(0 0,100% 0,100% 100%,0% 100%);*/
-       
     }
     .header .navbar{
         position:absolute;
@@ -212,23 +143,23 @@ body{
         background:#fff;
         border-top:var(--border);
         display:none;
-        /*clip-path:polygon(0 0,100% 0,0 0,0 0%);*/
-        
     }
-   
+    .header .navbar.active{
+        display:block;
+    }
     .header .navbar a{
         display:block;
-        margin:2rem;
+        margin:0.5rem;
+        left:0;
         font-size: 2rem;
-        
     }
-    
-  
 
 }
 
 @media(max-width:450px){
     html{
-        font-size:50%
+        font-size: 50%;
+       
     }
+    
 }
