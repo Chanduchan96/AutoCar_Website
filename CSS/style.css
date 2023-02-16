@@ -95,15 +95,34 @@ html{
     cursor: pointer;
     display:none;
 }
-body{
-    height:300rem;
-}
+
 
 .header.active{
     box-shadow:var(--box-shadow);
     padding:2rem 9%;
 }
-
+.login-form-container{
+    position:fixed;
+    z-index:1000;
+    top:0;;left:0;
+    height:100%;
+    width:100%;
+    background: rgba(255,255,255,.9);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.login-form-container form{
+    padding:2rem;
+    margin:2rem;
+    border-radius:0.5rem;
+    box-shadow:var(--box-shadow);
+    background:#fff;
+    border:var(--border);
+    text-align: center;
+    width:40rem;
+    
+}
 
 
 
