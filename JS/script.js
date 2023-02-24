@@ -61,3 +61,34 @@ window.onload=()=>{
             elm.style.transform=`translateX(${0}px) translateY(${0}px)`
         });
     }
+
+    var swiper = new Swiper(".vehicles-slider", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop:true,
+        grabCursor:true,
+        centeredSlides:true,
+        autoplay: {
+            delay: 9500,
+            disableOnInteraction: false
+          },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+        
+          },
+          768: {
+            slidesPerView: 2,
+           
+          },
+          991: {
+            slidesPerView: 3,
+           
+          },
+         
+        },
+      });

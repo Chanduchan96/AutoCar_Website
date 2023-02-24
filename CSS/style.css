@@ -270,14 +270,23 @@ section{
 }
 .vehicles .vehicles-slider .box img{
     width:100%;
-    /*
     opacity:0.5;
     transform:scale(.8);
-    */
+    
 }
 .vehicles .vehicles-slider .box .content{
-    /*transform:scale(0);*/
+    transform:scale(0);
     padding-top:1rem;
+}
+
+.vehicles .vehicles-slider .swiper-slide-active img{
+    opacity:1;
+    transform:scale(1);
+
+}
+
+.vehicles .vehicles-slider .swiper-slide-active .content{
+    transform:scale(1);
 }
 
 .vehicles .vehicles-slider .box .content h3{
@@ -311,6 +320,12 @@ section{
     padding:0 0.5rem;
 
 }
+.swiper-pagination-bullet-active{
+    background:var(--yellow);
+}
+
+
+
 /*media quiries*/
 
 @media(max-width:991px){
@@ -368,6 +383,9 @@ section{
     html{
         font-size: 50%;
        
+    }
+    .heading{
+        font-size:3rem;
     }
     
 }
